@@ -4,7 +4,8 @@
   "description": "An Angular2 and Grunt minimal project starter",
   "main": "index.js",
   "scripts": {
-    "start": "lite-server --baseDir './public' --files './public/**/*.html' './public/**/*.css' './public/**/*.js'"
+    "server": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached --host 0.0.0.0 --port 8080  --content-base src",
+    "start": "npm run server"
   },
   "repository": {
     "type": "git",
@@ -56,8 +57,8 @@
     "tslint-loader": "^2.1.5",
     "typescript": "^1.7.5",
     "url-loader": "^0.5.7",
-    "webpack": "^1.12.9",
-    "webpack-dev-server": "^1.14.0",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2",
     "webpack-sources": "^0.1.0"
   }
 }
