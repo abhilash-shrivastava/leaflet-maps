@@ -10,8 +10,8 @@ import {Location} from '../../core/location.class';
 
 @Component({
     selector: 'map',
-    template: '<div id="map"></div>',
-    styles: []
+    template: require<any>('./map.component.html'),
+    styles: [require<any>('./map.component.css').toString()]
 })
 
 export class MapComponent{
@@ -19,6 +19,10 @@ export class MapComponent{
     @Input('lat') lat: any;
     @Input('zoom') zoom: any;
     @Input('style') style: any;
+    mapPlaceHolder: any;
+    clicked = false;
+    mapBox:any;
+    closeButton: any;
     map: any;
 
     @ViewChild(MarkerComponent) markerComponent:MarkerComponent;
@@ -27,27 +31,45 @@ export class MapComponent{
     }
 
     ngOnInit() {
-        this.map = <HTMLInputElement>document.getElementById('map');
-        this.map.style.cssText = this.style;
-        var map = new L.Map('map', {
-            zoomControl: false,
-            center: new L.LatLng(this.lat, this.lng),
-            zoom: this.zoom,
-            minZoom: 4,
-            maxZoom: 19,
-            layers: [this.mapService.baseMaps.OpenStreetMap]
-        });
+        this.mapPlaceHolder = <HTMLInputElement>document.getElementById('map-place-holder');
+        this.mapPlaceHolder.style.cssText = this.style;
+        this.mapPlaceHolder.innerHTML = "Click To Interact";
+        this.mapPlaceHolder.style.display = 'flex';
+        this.mapPlaceHolder.style.justifyContent = 'center';
+        this.mapPlaceHolder.style.alignItems = 'center';
+        this.mapPlaceHolder.style.background = 'linear-gradient(rgba(20,20,20, .5),rgba(20,20,20, .5))';
+    }
 
-        L.control.zoom({ position: 'topright' }).addTo(map);
-        L.control.layers(this.mapService.baseMaps).addTo(map);
-        L.control.scale().addTo(map);
+    initializeMap(){
+        this.clicked = true;
+        this.mapBox = document.getElementById('map-box');
+        this.mapBox.style.display = "block";
+        if (!this.map){
+            this.map = new L.Map('map', {
+                zoomControl: false,
+                center: new L.LatLng(this.lat, this.lng),
+                zoom: this.zoom,
+                minZoom: 4,
+                maxZoom: 19,
+                layers: [this.mapService.baseMaps.OpenStreetMap]
+            });
 
-        this.mapService.map = map;
-        // this.geocoder.getCurrentLocation()
-        //     .subscribe(
-        //         location => map.panTo([location.latitude, location.longitude]),
-        //         err => console.error(err)
-        //     );
+            L.control.zoom({ position: 'topright' }).addTo(this.map);
+            L.control.layers(this.mapService.baseMaps).addTo(this.map);
+            L.control.scale().addTo(this.map);
+
+            this.mapService.map = this.map;
+            // this.geocoder.getCurrentLocation()
+            //     .subscribe(
+            //         location => map.panTo([location.latitude, location.longitude]),
+            //         err => console.error(err)
+            //     );
+        }
+    }
+
+    closeMap(){
+        this.closeButton = document.getElementsByClassName("close")[0];
+        this.mapBox.style.display = "none";
     }
 
     ngAfterViewInit() {

@@ -1,1 +1,17 @@
-<div id="map"><navigator></navigator><marker></marker></div>
+<div id="map-place-holder" (click)="initializeMap()"></div>
+
+<div id="map-box" class="modal" [hidden]="!clicked">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close" (click)="closeMap()">×</span>
+            <h2>Map</h2>
+        </div>
+        <div class="modal-body" id="map"></div>
+        <div class="modal-footer">
+            <h3>Powered by Leaflet</h3>
+        </div>
+    </div>
+
+</div>
