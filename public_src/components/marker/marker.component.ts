@@ -30,17 +30,15 @@ export class MarkerComponent {
     ngOnInit() {
     }
 
-    Initialize() {
-        console.log(this.markerlat);
-        console.log(this.markerlng);
-        let marker = L.marker([this.markerlat, this.markerlng], {
+    Initialize(lat:any, lng:any, title:any) {
+        let marker = L.marker([lat, lng], {
                 icon: L.icon({
                     iconUrl: require<any>('../../../node_modules/leaflet/dist/images/marker-icon.png'),
                     shadowUrl: require<any>('../../../node_modules/leaflet/dist/images/marker-shadow.png')
                 }),
                 draggable: true
             })
-            .bindPopup(this.title, {
+            .bindPopup(title, {
                 offset: L.point(12, 6)
             })
             .addTo(this.mapService.map);

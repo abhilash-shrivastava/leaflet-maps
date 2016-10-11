@@ -35,6 +35,10 @@ export class MapComponent{
     }
 
     ngOnInit() {
+        this.marker = (<HTMLScriptElement[]><any>document.getElementsByTagName('marker'))[0];
+        this.markerlat = this.marker.attributes.lat.nodeValue;
+        this.markerlng = this.marker.attributes.lng.nodeValue;
+        this.title = this.marker.attributes.title.nodeValue;
     }
 
     initializeMap(){
@@ -56,7 +60,7 @@ export class MapComponent{
             L.control.scale().addTo(this.map);
 
             this.mapService.map = this.map;
-            // this.markerComponent.Initialize();
+            this.markerComponent.Initialize(this.markerlat, this.markerlng, this.title);
             // this.geocoder.getCurrentLocation()
             //     .subscribe(
             //         location => map.panTo([location.latitude, location.longitude]),
