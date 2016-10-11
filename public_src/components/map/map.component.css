@@ -72,3 +72,18 @@
     color: white;
     bottom: 0;
 }
+
+#map-place-holder {
+    background-image: url("http://i.imgur.com/khaOHpF.gif");
+    font-size: large;
+    width: 250px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+}
+
+span{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}

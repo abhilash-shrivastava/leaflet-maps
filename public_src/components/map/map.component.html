@@ -1,14 +1,16 @@
-<div id="map-place-holder" (click)="initializeMap()"></div>
+<div id="map-place-holder" (click)="initializeMap()" style="width: 100%; height: 100%;">
+    <span>Click To Interact!</span>
+</div>
 
-<div id="map-box" class="modal" [hidden]="!clicked">
+<div id="map-box" class="modal" [hidden]="!clicked" #box>
 
     <!-- Modal content -->
     <div class="modal-content">
         <div class="modal-header">
-            <span class="close" (click)="closeMap()">×</span>
+            <span class="close" (click)="closeMap(box)">×</span>
         </div>
         <div class="modal-body" id="map">
-            <marker pinlat="23.1815" pinlng="79.9864" title="My Pin"></marker>
+            <!--<marker pinlat="23.1815" pinlng="79.9864" title="My Pin"></marker>-->
         </div>
     </div>
 
