@@ -19,14 +19,15 @@ export class MapComponent{
     @Input('lat') lat: any;
     @Input('zoom') zoom: any;
     @Input('style') style: any;
-    pinlat: any;
-    pinlng: any;
+    markerlat: any;
+    markerlng: any;
     title: any;
-    mapPlaceHolder: any;
     clicked = false;
     mapBox:any;
-    closeButton: any;
     map: any;
+    marker: any;
+    mapId : string;
+    mapElement: any;
 
     @ViewChild(MarkerComponent) markerComponent:MarkerComponent;
 
@@ -34,22 +35,13 @@ export class MapComponent{
     }
 
     ngOnInit() {
-        // this.mapPlaceHolder = <HTMLInputElement>document.getElementById('map-place-holder');
-        // this.mapPlaceHolder.style.cssText = this.style;
-        // this.mapPlaceHolder.innerHTML = "Click To Interact";
-        // this.mapPlaceHolder.style.display = 'flex';
-        // this.mapPlaceHolder.style.justifyContent = 'center';
-        // this.mapPlaceHolder.style.alignItems = 'center';
-        // this.mapPlaceHolder.style.background = 'red';
     }
 
     initializeMap(){
-        delete this.map;
         this.clicked = true;
         this.mapBox = document.getElementById('map-box');
         this.mapBox.style.display = "block";
         if (!this.map){
-            console.log("new");
             this.map = new L.Map('map', {
                 zoomControl: false,
                 center: new L.LatLng(this.lat, this.lng),

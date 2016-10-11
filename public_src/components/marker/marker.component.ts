@@ -16,8 +16,8 @@ export class MarkerComponent {
     removing: boolean;
     markerCount: number;
     // @Input('map') map: any;
-    @Input('pinlng') pinlng: any;
-    @Input('pinlat') pinlat: any;
+    @Input('markerlng') markerlng: any;
+    @Input('markerlat') markerlat: any;
     @Input('title') title: any;
 
 
@@ -31,9 +31,9 @@ export class MarkerComponent {
     }
 
     Initialize() {
-        console.log(this.pinlat);
-        console.log(this.pinlng);
-        let marker = L.marker([this.pinlat, this.pinlng], {
+        console.log(this.markerlat);
+        console.log(this.markerlng);
+        let marker = L.marker([this.markerlat, this.markerlng], {
                 icon: L.icon({
                     iconUrl: require<any>('../../../node_modules/leaflet/dist/images/marker-icon.png'),
                     shadowUrl: require<any>('../../../node_modules/leaflet/dist/images/marker-shadow.png')
