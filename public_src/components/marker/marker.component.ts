@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {MapService} from '../../services/map.service';
 import {Map, LeafletMouseEvent, Marker} from 'leaflet';
 
@@ -15,6 +15,11 @@ export class MarkerComponent {
     editing: boolean;
     removing: boolean;
     markerCount: number;
+    // @Input('map') map: any;
+    @Input('pinlng') pinlng: any;
+    @Input('pinlat') pinlat: any;
+    @Input('title') title: any;
+
 
     constructor(private mapService: MapService) {
         this.editing = false;
@@ -23,34 +28,28 @@ export class MarkerComponent {
     }
 
     ngOnInit() {
-        this.mapService.disableMouseEvent('add-marker');
-        this.mapService.disableMouseEvent('remove-marker');
     }
 
     Initialize() {
-        this.mapService.map.on('click', (e: LeafletMouseEvent) => {
-            if (this.editing) {
-                let marker = L.marker(e.latlng, {
-                    icon: L.icon({
-                        iconUrl: require<any>('../../../node_modules/leaflet/dist/images/marker-icon.png'),
-                        shadowUrl: require<any>('../../../node_modules/leaflet/dist/images/marker-shadow.png')
-                    }),
-                    draggable: true
-                })
-                .bindPopup('Marker #' + (this.markerCount + 1).toString(), {
-                    offset: L.point(12, 6)
-                })
-                .addTo(this.mapService.map)
-                .openPopup();
+        console.log(this.pinlat);
+        console.log(this.pinlng);
+        let marker = L.marker([this.pinlat, this.pinlng], {
+                icon: L.icon({
+                    iconUrl: require<any>('../../../node_modules/leaflet/dist/images/marker-icon.png'),
+                    shadowUrl: require<any>('../../../node_modules/leaflet/dist/images/marker-shadow.png')
+                }),
+                draggable: true
+            })
+            .bindPopup(this.title, {
+                offset: L.point(12, 6)
+            })
+            .addTo(this.mapService.map);
+        this.markerCount += 1;
 
-                this.markerCount += 1;
-
-                marker.on('click', (event: MouseEvent) => {
-                    if (this.removing) {
-                        this.mapService.map.removeLayer(marker);
-                        this.markerCount -= 1;
-                    }
-                });
+        marker.on('click', (event: MouseEvent) => {
+            if (this.removing) {
+                this.mapService.map.removeLayer(marker);
+                this.markerCount -= 1;
             }
         });
     }

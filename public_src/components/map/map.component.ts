@@ -19,6 +19,9 @@ export class MapComponent{
     @Input('lat') lat: any;
     @Input('zoom') zoom: any;
     @Input('style') style: any;
+    pinlat: any;
+    pinlng: any;
+    title: any;
     mapPlaceHolder: any;
     clicked = false;
     mapBox:any;
@@ -59,6 +62,7 @@ export class MapComponent{
             L.control.scale().addTo(this.map);
 
             this.mapService.map = this.map;
+            this.markerComponent.Initialize();
             // this.geocoder.getCurrentLocation()
             //     .subscribe(
             //         location => map.panTo([location.latitude, location.longitude]),
@@ -73,6 +77,5 @@ export class MapComponent{
     }
 
     ngAfterViewInit() {
-        // this.markerComponent.Initialize();
     }
 }

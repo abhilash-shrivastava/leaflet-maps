@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e24286a-a198-4959-9635-f85fbb81ff84" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_src/components/app/app.component.html" afterPath="$PROJECT_DIR$/public_src/components/app/app.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_src/components/map/map.component.css" afterPath="$PROJECT_DIR$/public_src/components/map/map.component.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_src/components/map/map.component.html" afterPath="$PROJECT_DIR$/public_src/components/map/map.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_src/components/map/map.component.ts" afterPath="$PROJECT_DIR$/public_src/components/map/map.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_src/components/marker/marker.component.html" afterPath="$PROJECT_DIR$/public_src/components/marker/marker.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_src/components/marker/marker.component.ts" afterPath="$PROJECT_DIR$/public_src/components/marker/marker.component.ts" />
     </list>
     <ignored path="angular2-leaflet-starter.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,8 +41,8 @@
       <file leaf-file-name="map.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public_src/components/map/map.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
+            <state relative-caret-position="202">
+              <caret line="64" column="46" selection-start-line="64" selection-start-column="46" selection-end-line="64" selection-end-column="46" />
               <folding>
                 <element signature="e#40#97#0" expanded="true" />
               </folding>
@@ -49,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="marker.component.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_src/components/marker/marker.component.less">
+      <file leaf-file-name="app.component.less" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public_src/components/app/app.component.less">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -62,9 +63,11 @@
       <file leaf-file-name="marker.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public_src/components/marker/marker.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="6" column="26" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="26" />
-              <folding />
+            <state relative-caret-position="247">
+              <caret line="45" column="40" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#47#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -99,11 +102,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map.component.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="map.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public_src/components/map/map.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+            <state relative-caret-position="165">
+              <caret line="11" column="57" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -113,7 +116,7 @@
         <entry file="file://$PROJECT_DIR$/public_src/components/app/app.component.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="109" selection-start-line="0" selection-start-column="109" selection-end-line="0" selection-end-column="109" />
+              <caret line="0" column="152" selection-start-line="0" selection-start-column="152" selection-end-line="0" selection-end-column="152" />
               <folding>
                 <element signature="n#style#0;n#map#0;n#!!top" expanded="true" />
               </folding>
@@ -121,14 +124,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_src/bootstrap.ts">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#73#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="442">
+              <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -157,9 +158,12 @@
         <option value="$PROJECT_DIR$/public_src/components/map/styled.directives.ts" />
         <option value="$PROJECT_DIR$/public_src/components/app/app.component.ts" />
         <option value="$PROJECT_DIR$/public_src/components/map/map.component.css" />
-        <option value="$PROJECT_DIR$/public_src/components/app/app.component.html" />
+        <option value="$PROJECT_DIR$/public_src/components/marker/marker.component.html" />
         <option value="$PROJECT_DIR$/public_src/components/map/map.component.ts" />
+        <option value="$PROJECT_DIR$/public_src/components/marker/marker.component.ts" />
         <option value="$PROJECT_DIR$/public_src/components/map/map.component.html" />
+        <option value="$PROJECT_DIR$/public_src/components/app/app.component.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -394,12 +398,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1476118079290</updated>
-      <workItem from="1476118080624" duration="25251000" />
+      <workItem from="1476118080624" duration="29512000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25251000" />
+    <option name="totallyTimeSpent" value="29512000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -510,20 +514,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_src/components/app/app.component.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_src/bootstrap.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
           <folding>
-            <element signature="e#0#73#0" expanded="true" />
+            <element signature="e#0#73#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -560,6 +556,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public_src/components/marker/marker.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_src/components/marker/marker.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="45" column="40" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_src/components/app/app.component.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_src/components/map/map.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="64" column="46" selection-start-line="64" selection-start-column="46" selection-end-line="64" selection-end-column="46" />
+          <folding>
+            <element signature="e#40#97#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_src/components/map/map.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="57" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public_src/components/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -571,43 +611,17 @@
     <entry file="file://$PROJECT_DIR$/public_src/components/app/app.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="109" selection-start-line="0" selection-start-column="109" selection-end-line="0" selection-end-column="109" />
+          <caret line="0" column="152" selection-start-line="0" selection-start-column="152" selection-end-line="0" selection-end-column="152" />
           <folding>
             <element signature="n#style#0;n#map#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_src/components/marker/marker.component.ts">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="26" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_src/components/marker/marker.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_src/components/map/map.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
-          <folding>
-            <element signature="e#40#97#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_src/components/map/map.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        <state relative-caret-position="442">
+          <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
           <folding />
         </state>
       </provider>
