@@ -33,3 +33,4 @@ public
 .tscache
 
 .idea/workspace.xml
+.idea*
